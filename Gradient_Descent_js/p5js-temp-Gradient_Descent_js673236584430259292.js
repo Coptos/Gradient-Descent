@@ -10,16 +10,16 @@ function setup() {
 // Aplicación de formula de mínimos cuadrados
 function gradientDescent() {
   
-  var alfa = 0.01; // learning rate 
+  var alfa = 0.03; // learning rate 
   
  for(var i=0; i< datos.length; i++){
    var x = datos [i].x;
    var y = datos [i].y;
    
-   var objetivo = m * x + b;
-   var error = objetivo - y;
+   var recta = m * x + b;
+   var error = y - recta;
    
-   m = m + (error * x) *alfa;
+   m = m + (error * x) * alfa;
    b = b + (error) * alfa;
    
  }
