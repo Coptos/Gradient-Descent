@@ -1,5 +1,5 @@
 var datos = [];
-var m = 1;
+var m = 0;
 var b = 0;
 
 // Fondo
@@ -7,10 +7,10 @@ function setup() {
   createCanvas(500, 500); // Personal (1366,662)
 }
 
-// Aplicación de formula de mínimos cuadrados
-function gradientDescent() {
+// Gradiente Descendiente 
+function gradienteDescendiente() {
   
-  var alfa = 0.03; // learning rate 
+  var alfa = 0.005; // learning rate 
   
  for(var i=0; i< datos.length; i++){
    var x = datos [i].x;
@@ -65,7 +65,7 @@ function draw() {
   }
 
   if (datos.length > 1) {
-    gradientDescent();
+    gradienteDescendiente();
     drawLine();
   }
 }
